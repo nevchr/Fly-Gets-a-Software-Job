@@ -22,8 +22,8 @@ The production backend now runs the open-source `flybrain 0.1.0` simulation of t
 ## Requirements
 
 - Python 3.12 or newer
-- Node.js 20 or newer
-- npm or pnpm
+- Node.js 22.12 or newer
+- pnpm (use the committed frontend lockfile)
 
 No account, API key, paid service, Docker, or internet connection is needed after dependencies are installed.
 
@@ -61,7 +61,7 @@ Open a second PowerShell window in the repository root:
 
 ```powershell
 cd frontend
-pnpm install
+pnpm install --frozen-lockfile
 Copy-Item .env.example .env
 pnpm dev
 ```
