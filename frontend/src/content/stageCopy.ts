@@ -1,0 +1,156 @@
+type SceneCopy = { kicker: string; title: string; screen: string; mode: string }
+
+type StageWriting = Omit<SceneCopy, 'title'> & { titles: readonly string[] }
+
+const writing: Record<string, StageWriting> = {
+  SEARCHING_FOR_JOB: {
+    kicker: 'HUNTING', screen: 'JOB BOARD', mode: 'searching', titles: [
+      'Scrolling jobs with unreasonable optimism',
+      'Refreshing the board like it owes him rent',
+      'Looking for a role with fewer than six interview rounds',
+      'Searching for a manager who likes flies',
+      'One more refresh. Surely this is the one.',
+      'Finding new ways to be underqualified',
+      'Looking for a job that accepts six legs',
+      'Scanning the internet for a junior position',
+      'Applying filters. Ignoring the red flags.',
+      'Searching for flexible species requirements',
+      'Another tab, another improbable opportunity',
+      'Tracking down the elusive entry-level role',
+    ],
+  },
+  VIEWING_JOB: {
+    kicker: 'RESEARCHING', screen: 'JOB POST', mode: 'reading', titles: [
+      'Reading every red flag as a fun challenge',
+      'Checking whether “remote” means remote',
+      'Investigating the phrase “fast-paced family”',
+      'Parsing the posting like a cryptic error log',
+      'Scanning for the part where they mention salary',
+      'Considering a job with nine required frameworks',
+      'Reading the responsibilities. All of them.',
+      'Trying to learn what this company actually does',
+      'Evaluating the role with all available neurons',
+      'Finding the requirement hidden at the bottom',
+      'Checking if “competitive pay” has a number',
+      'Studying the benefits package for crumbs',
+    ],
+  },
+  DECIDING_TO_APPLY: {
+    kicker: 'THINKING', screen: 'APPLY?', mode: 'thinking', titles: [
+      'Asking 166,700 neurons if this is a good idea',
+      'Debating whether this counts as relevant experience',
+      'Running a cost-benefit analysis on vibes',
+      'Considering the job, the pay, and the office spider',
+      'Trying to distinguish ambition from a reflex',
+      'Consulting the connectome before clicking apply',
+      'Calculating if the résumé can survive this',
+      'Thinking extremely hard for a very small animal',
+      'Making a career decision with compound eyes',
+      'Comparing the requirements to a fly lifespan',
+      'Weighing the upside against another form',
+      'Finding courage somewhere in the ventral nerve cord',
+    ],
+  },
+  APPLICATION_SENT: {
+    kicker: 'SUBMITTING', screen: 'SENT!', mode: 'typing', titles: [
+      'Launching another résumé into the void',
+      'Submitting a cover letter against all odds',
+      'Clicking apply with six very steady hands',
+      'Sending qualifications and a little hope',
+      'Uploading one suspiciously tiny résumé',
+      'Committing to another hiring pipeline',
+      'Answering “why us?” with impressive confidence',
+      'Trusting the submit button one more time',
+      'Sending a résumé and bracing for impact',
+      'Entering the applicant-tracking maze',
+      'Attaching proof of relevant buzzing experience',
+      'Making the application somebody else’s problem',
+    ],
+  },
+  APPLICATION_RESULT: {
+    kicker: 'REFRESHING', screen: 'INBOX', mode: 'waiting', titles: [
+      'Waiting for the automated verdict',
+      'Refreshing the inbox without blinking',
+      'Watching the status badge do absolutely nothing',
+      'Hoping the résumé survives the first filter',
+      'Waiting for a human to notice the wings',
+      'Reading far too much into a loading spinner',
+      'Holding out for one non-automated reply',
+      'Practicing patience in fly-sized intervals',
+      'Checking email like it’s a competitive sport',
+      'Waiting for the next stage of character development',
+      'Listening for a notification that may never come',
+      'Wondering whether “under review” means anything',
+    ],
+  },
+  RECRUITER_SCREEN: {
+    kicker: 'NETWORKING', screen: 'VIDEO CALL', mode: 'talking', titles: [
+      'Attempting professional eye contact',
+      'Explaining the career gap between yesterday and today',
+      'Trying to sound calm on a video call',
+      'Answering “tell me about yourself” with wing gestures',
+      'Meeting the recruiter. Remembering to mute.',
+      'Making small talk at approximately 200 wingbeats',
+      'Searching for the unmute button',
+      'Presenting himself as a strong culture add',
+      'Trying not to land on the webcam',
+      'Being assessed for communication skills',
+      'Explaining why six arms improve collaboration',
+      'Taking the phrase “quick chat” very seriously',
+    ],
+  },
+  TECHNICAL_INTERVIEW: {
+    kicker: 'SOLVING', screen: 'LIVE CODING', mode: 'typing', titles: [
+      'Letting a connectome choose the algorithm',
+      'Explaining Big-O under immense pressure',
+      'Finding a base case before the panic sets in',
+      'Turning neural spikes into a coding answer',
+      'Deciding whether the problem wants a hash map',
+      'Debugging in public, as nature intended',
+      'Picking an answer before the timer wins',
+      'Working through a question one neuron at a time',
+      'Making a case for the least suspicious solution',
+      'Trying to remember what an array is',
+      'Hoping the interviewer accepts pseudocode',
+      'Discovering a new fear of whiteboards',
+    ],
+  },
+  BEHAVIORAL_INTERVIEW: {
+    kicker: 'EXPLAINING', screen: 'TEAM CHAT', mode: 'talking', titles: [
+      'Turning wing flaps into leadership examples',
+      'Describing teamwork without mentioning the swarm',
+      'Explaining a conflict with a colleague',
+      'Trying to give a STAR answer with no hands free',
+      'Speaking confidently about professional growth',
+      'Finding an example of cross-functional buzzing',
+      'Answering another question about culture fit',
+      'Reframing accidental flight as initiative',
+      'Trying to sound like a team player',
+      'Making a personality out of being resilient',
+      'Defining collaboration for an audience of one',
+      'Describing a challenge without naming the window',
+    ],
+  },
+  FINAL_RESULT: {
+    kicker: 'DISCOVERING', screen: 'FINAL EMAIL', mode: 'waiting', titles: [
+      'Opening the email that decides everything',
+      'Waiting for the final committee decision',
+      'Refreshing one last time',
+      'Preparing for good news, bad news, or silence',
+      'Wondering whether an offer can fit in the inbox',
+      'Checking if the last round was actually the last',
+      'Reading the subject line with all available eyes',
+      'Trying to stay composed for the verdict',
+      'Waiting while the hiring manager circles back',
+      'Approaching the most consequential notification',
+      'Letting the inbox load before making assumptions',
+      'Considering what to do with a possible offer',
+    ],
+  },
+}
+
+export function sceneCopyFor(stage: string, tick: number, jobId?: number): SceneCopy {
+  const entry = writing[stage] ?? writing.SEARCHING_FOR_JOB
+  const sequence = jobId ?? tick
+  return { ...entry, title: entry.titles[sequence % entry.titles.length] }
+}

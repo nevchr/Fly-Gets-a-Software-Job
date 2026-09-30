@@ -1,0 +1,190 @@
+{
+  "dataset": "MaleCNS v1.0",
+  "attribution": "FlyEM / HHMI Janelia, University of Cambridge, MRC Laboratory of Molecular Biology, Google Research",
+  "license": "CC BY 4.0",
+  "source": "https://male-cns.janelia.org/download/",
+  "overview": {
+    "file": "brain-positions.bin",
+    "point_count": 125020,
+    "all_neuron_count": 166700,
+    "positioned_neuron_count": 140638,
+    "region": "brain (soma or soma-tract points; z < 50,000 EM voxels)"
+  },
+  "population_groups": [
+    {
+      "name": "approach",
+      "label": "LC10a_L",
+      "color": "#66d6db",
+      "neuron_count": 135,
+      "point_count": 135,
+      "file": "populations/approach.bin"
+    },
+    {
+      "name": "avoidance",
+      "label": "LC10a_R",
+      "color": "#8fb8ee",
+      "neuron_count": 140,
+      "point_count": 140,
+      "file": "populations/avoidance.bin"
+    },
+    {
+      "name": "threat",
+      "label": "LC4_R",
+      "color": "#e9a078",
+      "neuron_count": 55,
+      "point_count": 55,
+      "file": "populations/threat.bin"
+    },
+    {
+      "name": "looming_work",
+      "label": "LPLC2_R",
+      "color": "#c8aaec",
+      "neuron_count": 91,
+      "point_count": 91,
+      "file": "populations/looming_work.bin"
+    },
+    {
+      "name": "choice_uncertainty",
+      "label": "LPLC1_L",
+      "color": "#e5cf7e",
+      "neuron_count": 68,
+      "point_count": 68,
+      "file": "populations/choice_uncertainty.bin"
+    }
+  ],
+  "skeletons": [
+    {
+      "body_id": 10573,
+      "label": "LC10a_L",
+      "role": "approach input",
+      "color": "#66d6db",
+      "soma": [
+        1.89458,
+        0.67311,
+        0.19942
+      ],
+      "segment_count": 1213,
+      "file": "skeletons/10573.bin",
+      "distance_file": "skeletons/10573-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/10573-surge.bin",
+      "surge_path_point_count": 197,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/10573.swc"
+    },
+    {
+      "body_id": 21065,
+      "label": "LC10a_R",
+      "role": "avoidance input",
+      "color": "#8fb8ee",
+      "soma": [
+        -1.83647,
+        0.55303,
+        0.16729
+      ],
+      "segment_count": 1631,
+      "file": "skeletons/21065.bin",
+      "distance_file": "skeletons/21065-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/21065-surge.bin",
+      "surge_path_point_count": 215,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/21065.swc"
+    },
+    {
+      "body_id": 16128,
+      "label": "LC4_R",
+      "role": "threat input",
+      "color": "#e9a078",
+      "soma": [
+        -1.35237,
+        -0.28958,
+        0.21616
+      ],
+      "segment_count": 1772,
+      "file": "skeletons/16128.bin",
+      "distance_file": "skeletons/16128-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/16128-surge.bin",
+      "surge_path_point_count": 146,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/16128.swc"
+    },
+    {
+      "body_id": 14465,
+      "label": "LPLC2_R",
+      "role": "workload input",
+      "color": "#c8aaec",
+      "soma": [
+        -1.59079,
+        0.63521,
+        0.44826
+      ],
+      "segment_count": 2466,
+      "file": "skeletons/14465.bin",
+      "distance_file": "skeletons/14465-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/14465-surge.bin",
+      "surge_path_point_count": 312,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/14465.swc"
+    },
+    {
+      "body_id": 12052,
+      "label": "LPLC1_L",
+      "role": "uncertainty input",
+      "color": "#e5cf7e",
+      "soma": [
+        1.79937,
+        0.90221,
+        0.56945
+      ],
+      "segment_count": 1879,
+      "file": "skeletons/12052.bin",
+      "distance_file": "skeletons/12052-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/12052-surge.bin",
+      "surge_path_point_count": 264,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/12052.swc"
+    },
+    {
+      "body_id": 523769,
+      "label": "DNa02_L",
+      "role": "approach output",
+      "color": "#cbf570",
+      "soma": [
+        1.08876,
+        0.81047,
+        -1.03461
+      ],
+      "segment_count": 11208,
+      "file": "skeletons/523769.bin",
+      "distance_file": "skeletons/523769-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/523769-surge.bin",
+      "surge_path_point_count": 312,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/523769.swc"
+    },
+    {
+      "body_id": 10360,
+      "label": "DNa02_R",
+      "role": "avoidance output",
+      "color": "#ed8068",
+      "soma": [
+        -1.13439,
+        0.80811,
+        -0.89992
+      ],
+      "segment_count": 11570,
+      "file": "skeletons/10360.bin",
+      "distance_file": "skeletons/10360-distance.bin",
+      "distance_origin": "nearest node to annotated soma per connected fragment; normalized branch path length",
+      "surge_path_file": "skeletons/10360-surge.bin",
+      "surge_path_point_count": 188,
+      "surge_path_origin": "largest continuous brain-space fragment, from its node nearest annotated soma",
+      "source": "https://storage.googleapis.com/flyem-male-cns/v1.0/segmentation/skeletons-malecns/skeletons-swc/10360.swc"
+    }
+  ]
+}
